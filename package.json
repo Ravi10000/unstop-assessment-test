@@ -14,10 +14,13 @@
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "@uidotdev/usehooks": "^2.4.1",
+    "clsx": "^2.1.0",
     "framer-motion": "^10.17.9",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
