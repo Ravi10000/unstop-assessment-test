@@ -23,13 +23,13 @@ function Sidebar({ isSidebarOpen, setSelectedPage, setIsSidebarOpen }) {
     >
       <div
         className={cn(
-          "absolute h-full w-full bg-black/30 z-10 hidden",
+          "absolute h-full w-full bg-black/10 z-10 hidden",
           isSidebarOpen ? "animate-appear block" : ""
         )}
       ></div>
       <aside
         className={cn(
-          "z-20 h-screen w-screen max-w-[315px] bg-_designBlue-200 transition-all py-10 flex flex-col gap-10 items-center relative md:static  md:w-fit md:px-2 md:bg-white md:animate-none",
+          "z-20 h-screen w-screen max-w-[315px] bg-_designBlue-200 transition-all py-10 flex flex-col gap-10 items-center relative md:static  md:w-fit md:px-2 md:bg-white",
           isSidebarOpen ? "left-0" : "-left-full"
           // isSidebarOpen ? "left-0" : "-left-full"
         )}

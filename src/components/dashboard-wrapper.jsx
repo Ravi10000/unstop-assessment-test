@@ -8,14 +8,15 @@ import { menuOptions } from "#/utilities/sidebar-options";
 function DashboardWrapper() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState(menuOptions[0]);
+
   return (
     <div
       className={cn(
-        "flex gap-5 overflow-hidden h-screen bg-_designGray-300 w-full"
+        "flex gap-5 overflow-hidden h-screen bg-_designGray-100 w-full"
       )}
     >
       <Sidebar {...{ isSidebarOpen, setIsSidebarOpen, setSelectedPage }} />
-      <main className={cn("w-full")}>
+      <main className={cn("w-full h-screen overflow-y-auto")}>
         <Header {...{ isSidebarOpen, setIsSidebarOpen, selectedPage }} />
         <Outlet />
       </main>

@@ -10,6 +10,7 @@ export default {
         disappear: "disappear 0.5s ease-in-out forwards",
         slideIn: "slideIn 0.5s ease-in-out forwards",
         slideOut: "slideOut 0.5s ease-in-out forwards",
+        slideUp: "slideUp 0.5s ease-in-out forwards",
       },
       keyframes: {
         appear: {
@@ -28,11 +29,20 @@ export default {
           "0%": { left: "0" },
           "100%": { left: "-100%" },
         },
+        slideUp: {
+          "0%": {
+            bottom: "-100%",
+          },
+          "100%": {
+            bottom: "0%",
+          },
+        },
       },
       colors: {
         _designGray: {
           100: "#F6F8FA",
-          300: "#F6F8FA",
+          200: "#DADCE0",
+          300: "#8DA4BF",
         },
         _designBlue: {
           100: "#3E6493",
