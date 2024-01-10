@@ -11,7 +11,7 @@ function DashboardWrapper() {
   return (
     <div
       className={cn(
-        "flex gap-5 overflow-hidden h-screen bg-_designGray w-full"
+        "flex gap-5 overflow-hidden h-screen bg-_designGray-300 w-full"
       )}
     >
       <Sidebar {...{ isSidebarOpen, setIsSidebarOpen, setSelectedPage }} />

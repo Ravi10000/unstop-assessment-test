@@ -17,7 +17,7 @@ function Sidebar({ isSidebarOpen, setSelectedPage, setIsSidebarOpen }) {
   return (
     <aside
       className={cn(
-        "w-full bg-black/30 fixed top-0 left-0 h-screen md:w-fit md:static",
+        "w-full bg-black/30 fixed top-0 left-0 h-screen md:w-fit md:static z-10 transition-all",
         isSidebarOpen ? "left-0" : "-left-full"
       )}
     >

@@ -6,8 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        _designGray: "#F6F8FA",
+        _designGray: {
+          100: "#F6F8FA",
+          300: "#F6F8FA",
+        },
         _designBlue: {
+          100: "#3E6493",
           200: "#F2F8FE",
           300: "#E5F1FC",
           500: "#0073E6",
