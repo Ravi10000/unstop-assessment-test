@@ -17,14 +17,21 @@ function Sidebar({ isSidebarOpen, setSelectedPage, setIsSidebarOpen }) {
   return (
     <aside
       className={cn(
-        "w-full bg-black/30 fixed top-0 left-0 h-screen md:w-fit md:static z-10 transition-all",
-        isSidebarOpen ? "left-0" : "-left-full"
+        "w-full fixed top-0 left-0 h-screen md:w-fit md:static z-10 transition-all",
+        isSidebarOpen ? "" : "pointer-events-none"
       )}
     >
+      <div
+        className={cn(
+          "absolute h-full w-full bg-black/30 z-10 hidden",
+          isSidebarOpen ? "animate-appear block" : ""
+        )}
+      ></div>
       <aside
         className={cn(
-          "h-screen w-screen max-w-[315px] bg-_designBlue-200 transition-all py-10 flex flex-col gap-10 items-center relative md:static  md:w-fit md:px-2 md:bg-white",
+          "z-20 h-screen w-screen max-w-[315px] bg-_designBlue-200 transition-all py-10 flex flex-col gap-10 items-center relative md:static  md:w-fit md:px-2 md:bg-white md:animate-none",
           isSidebarOpen ? "left-0" : "-left-full"
+          // isSidebarOpen ? "left-0" : "-left-full"
         )}
       >
         <div className="flex justify-between items-center w-full max-w-[275px] text-_designBlue-600 md:hidden">

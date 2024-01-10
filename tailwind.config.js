@@ -5,6 +5,30 @@ export default {
 
   theme: {
     extend: {
+      animation: {
+        appear: "appear 0.5s ease-in-out forwards",
+        disappear: "disappear 0.5s ease-in-out forwards",
+        slideIn: "slideIn 0.5s ease-in-out forwards",
+        slideOut: "slideOut 0.5s ease-in-out forwards",
+      },
+      keyframes: {
+        appear: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        disappear: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+        slideIn: {
+          "0%": { left: "-100%" },
+          "100%": { left: "0" },
+        },
+        slideOut: {
+          "0%": { left: "0" },
+          "100%": { left: "-100%" },
+        },
+      },
       colors: {
         _designGray: {
           100: "#F6F8FA",
