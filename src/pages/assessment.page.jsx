@@ -1,5 +1,6 @@
 import AddAssessment from "#/components/add-assessment-button";
 import AddAssessmentPopup from "#/components/add-assessment-popup";
+import AssessmentStats from "#/components/assessment-stats";
 import FloatingAddButton from "#/components/floating-add-button";
 import { useState } from "react";
 
@@ -29,9 +30,10 @@ function AssessmentPage() {
           </button>
         </div>
       </div>
-      <AddAssessment {...{ openPopup }} />
       <FloatingAddButton {...{ openPopup }} />
       <AddAssessmentPopup {...{ closePopup, isPopupOpen }} />
+      <AssessmentStats />
+      <AddAssessment {...{ openPopup }} />
     </div>
   );
 }

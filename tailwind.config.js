@@ -55,6 +55,9 @@ export default {
           300: "#FBEBEA",
           500: "#D63500",
         },
+        _designGreen: {
+          300: "#05C165",
+        },
       },
     },
   },
