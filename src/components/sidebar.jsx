@@ -18,7 +18,7 @@ function Sidebar({ isSidebarOpen, setSelectedPage, setIsSidebarOpen }) {
     <aside
       className={cn(
         "w-full fixed top-0 left-0 h-screen md:w-fit md:static z-10 transition-all",
-        isSidebarOpen ? "" : "pointer-events-none"
+        isSidebarOpen ? "" : "pointer-events-none md:pointer-events-auto"
       )}
     >
       <div

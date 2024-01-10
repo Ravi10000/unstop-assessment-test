@@ -16,7 +16,7 @@ function AssessmentPage() {
   const [searchParams] = useSearchParams();
   const selectedTab = searchParams.get("tab") || tabs[0].value;
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 bg-white h-[200vh] overflow-auto">
       <TabSwitcher {...{ tabs, selectedTab }} />
     </div>
   );
