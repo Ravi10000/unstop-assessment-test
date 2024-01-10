@@ -39,7 +39,7 @@ function AddAssessmentPopup({ closePopup, isPopupOpen }) {
       <div
         ref={ref}
         className={cn(
-          "w-full bg-white h-[80%] md:h-fit max-w-[580px] absolute left-1/2 -translate-x-1/2 md:top-1/2 md:-translate-y-1/2 z-40 rounded-tl-xl rounded-tr-xl md:rounded-xl transition-all flex flex-col -bottom-full",
+          "w-full bg-white h-[80%] md:h-fit max-w-[580px] absolute left-1/2 -translate-x-1/2 md:top-1/2 md:-translate-y-1/2 z-40 rounded-tl-xl rounded-tr-xl md:rounded-xl flex flex-col transition-all",
           isPopupOpen ? "bottom-0" : "-bottom-full"
         )}
       >
