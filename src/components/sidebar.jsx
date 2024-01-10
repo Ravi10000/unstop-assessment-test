@@ -7,9 +7,13 @@ import { menuOptions, adminOptions } from "#/utilities/sidebar-options";
 Sidebar.propTypes = {
   isSidebarOpen: _.bool,
   setIsSidebarOpen: _.func,
+  setSelectedPage: _.func,
 };
-function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
-  console.log({ isSidebarOpen });
+
+function Sidebar({ isSidebarOpen, setSelectedPage, setIsSidebarOpen }) {
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
   return (
     <aside
       className={cn(
@@ -25,21 +29,22 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
       >
         <div className="flex justify-between items-center w-full max-w-[275px] text-_designBlue-600 md:hidden">
           <h3 className="text-sm font-medium">Menu</h3>
-          <button
-            onClick={() => {
-              setIsSidebarOpen(false);
-            }}
-          >
+          <button onClick={closeSidebar}>
             <img src="/icons/close.svg" alt="close menu" />
           </button>
         </div>
-        <SidebarOptions />
+        <SidebarOptions {...{ setSelectedPage, closeSidebar }} />
       </aside>
     </aside>
   );
 }
 
-function SidebarOptions() {
+SidebarOptions.propTypes = {
+  setSelectedPage: _.func,
+  closeSidebar: _.func,
+};
+
+function SidebarOptions({ setSelectedPage, closeSidebar }) {
   const { pathname } = useLocation();
   return (
     <ul className="flex flex-col gap-2 items-center w-full">
@@ -49,9 +54,13 @@ function SidebarOptions() {
           <motion.li
             key={title}
             whileTap={{ scale: 0.9 }}
-            className="w-full max-w-[275px]"
+            className="w-full max-w-[275px] text-center"
           >
             <Link
+              onClick={() => {
+                setSelectedPage({ title, path });
+                closeSidebar();
+              }}
               to={path}
               className={cn(
                 "border rounded-lg flex gap-2 p-3 font-semibold md:flex-col md:items-center md:text-[12px]",
@@ -65,7 +74,7 @@ function SidebarOptions() {
                 src={`/icons/${isSelected ? activeIcon : icon}`}
                 alt={title}
               />
-              <span>{title}</span>
+              <span className="font-medium">{title}</span>
             </Link>
           </motion.li>
         );
@@ -77,9 +86,13 @@ function SidebarOptions() {
           <motion.li
             key={title}
             whileTap={{ scale: 0.95 }}
-            className="w-full max-w-[275px]"
+            className="w-full max-w-[275px] text-center"
           >
             <Link
+              onClick={() => {
+                setSelectedPage({ title, path });
+                closeSidebar();
+              }}
               to={path}
               className={cn(
                 "border rounded-lg flex justify-between gap-2 p-3 font-semibold md:flex-col md:items-center md:text-[12px]",
@@ -94,7 +107,7 @@ function SidebarOptions() {
                   src={`/icons/${isSelected ? activeIcon : icon}`}
                   alt={title}
                 />
-                <span>{title}</span>
+                <span className="font-medium">{title}</span>
               </div>
               <span className="bg-_designRed-300 border border-_designRed-500 rounded-full text-_designRed-500 py-1 px-3 text-[10px] w-fit">
                 Admin
