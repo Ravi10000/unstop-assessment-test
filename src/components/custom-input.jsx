@@ -8,7 +8,7 @@ function CustomInput({ label, ...rest }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-2">
-      {label && (
+      {!!label && (
         <label
           htmlFor={id}
           className="text-_designBlue-600 font-medium text-[12px] md:text-[16px]"

@@ -4,6 +4,7 @@ import _ from "prop-types";
 import CustomInput from "./custom-input";
 import CustomSelect from "./custom-select";
 import { useClickAway } from "@uidotdev/usehooks";
+import DynamicSelect from "./dynamic-select";
 
 AddAssessmentPopup.propTypes = {
   closePopup: _.func,
@@ -38,7 +39,7 @@ function AddAssessmentPopup({ closePopup, isPopupOpen }) {
       <div
         ref={ref}
         className={cn(
-          "w-full bg-white h-[80%] max-w-[580px] absolute left-1/2 -translate-x-1/2 md:top-1/2 md:-translate-y-1/2 z-40 rounded-tl-xl rounded-tr-xl md:rounded-xl transition-all flex flex-col -bottom-full",
+          "w-full bg-white h-[80%] md:h-fit max-w-[580px] absolute left-1/2 -translate-x-1/2 md:top-1/2 md:-translate-y-1/2 z-40 rounded-tl-xl rounded-tr-xl md:rounded-xl transition-all flex flex-col -bottom-full",
           isPopupOpen ? "bottom-0" : "-bottom-full"
         )}
       >
@@ -54,7 +55,8 @@ function AddAssessmentPopup({ closePopup, isPopupOpen }) {
           <CustomInput label="Name of assessment" />
           <CustomSelect label="Purpose of the test is" options={options} />
           <CustomSelect label="Description" options={options} />
-          <CustomInput label="Duration of assessment" placeholder="HH:MM:SS"/>
+          <DynamicSelect label="Skills" />
+          <CustomInput label="Duration of assessment" placeholder="HH:MM:SS" />
         </div>
         <div className="p-4 border-t border-t-_designGray-200 mt-auto">
           <button className="w-full h-10 flex justify-center items-center bg-_designBlue-500 text-white font-semibold text-sm rounded-lg">
