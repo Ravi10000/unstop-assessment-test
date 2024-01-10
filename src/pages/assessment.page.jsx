@@ -1,5 +1,5 @@
-import { cn } from "#/utilities/cn";
-import { Link, useSearchParams } from "react-router-dom";
+import TabSwitcher from "#/components/tab-switcher";
+import { useSearchParams } from "react-router-dom";
 
 const tabs = [
   {
@@ -14,23 +14,10 @@ const tabs = [
 
 function AssessmentPage() {
   const [searchParams] = useSearchParams();
-  const selectedTab = searchParams.get("tab") || "my-assessments";
+  const selectedTab = searchParams.get("tab") || tabs[0].value;
   return (
-    <div className="grid grid-cols-2 w-full bg-white">
-      {tabs?.map(({ label, value }) => (
-        <Link
-          key={value}
-          to={"?tab=" + value}
-          className={cn(
-            "border-b-2 border-b-_designGray-100 text-_designBlue-100 pb-3 font-medium text-sm text-center ",
-            selectedTab === value
-              ? "border-b-_designBlue-500 text-_designBlue-500"
-              : ""
-          )}
-        >
-          {label}
-        </Link>
-      ))}
+    <div className="flex flex-col gap-10">
+      <TabSwitcher {...{ tabs, selectedTab }} />
     </div>
   );
 }
