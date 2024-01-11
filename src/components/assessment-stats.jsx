@@ -1,6 +1,6 @@
 function AssessmentStats() {
   return (
-    <div className="border border-_designGray-200 rounded-lg text-sm font-medium text-_designBlue-600 md:font-semibold xl:flex xl:gap-12 xl:w-fit">
+    <div className="border border-_designGray-200 rounded-lg text-sm font-medium text-_designBlue-600 md:font-semibold xl:flex xl:gap-12 xl:max-w-[1250px]">
       <div className="flex justify-between border-b border-b-_designGray-200 xl:border-none min-w-[150px]">
         <div className="flex flex-col gap-3 px-3 py-2 md:py-4 flex-1">
           <h3 className="">Total Assessment</h3>

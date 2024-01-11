@@ -38,7 +38,7 @@ function AssessmentPage() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col gap-3 lg:flex-row flex-wrap">
+      <div className="flex flex-col gap-5 w-full max-w-[1250px] xl:grid xl:grid-cols-3">
         <AddAssessment {...{ openPopup }} />
         <AssessmentCard />
         <AssessmentCard count={1} />
