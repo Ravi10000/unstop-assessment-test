@@ -3,6 +3,7 @@ import AddAssessmentPopup from "#/components/add-assessment-popup";
 import AssessmentCard from "#/components/assessment-card";
 import AssessmentStats from "#/components/assessment-stats";
 import FloatingAddButton from "#/components/floating-add-button";
+import { cn } from "#/utilities/cn";
 import { useState } from "react";
 
 function AssessmentPage() {
@@ -38,7 +39,11 @@ function AssessmentPage() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col gap-5 w-full max-w-[1250px] xl:grid xl:grid-cols-3">
+      <div
+        className={cn(
+          "flex flex-col gap-5 w-full max-w-[1250px] xl:grid xl:grid-cols-3 xl:justify-between"
+        )}
+      >
         <AddAssessment {...{ openPopup }} />
         <AssessmentCard />
         <AssessmentCard count={1} />

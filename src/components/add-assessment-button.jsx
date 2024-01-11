@@ -6,7 +6,7 @@ AddAssessment.propTypes = {
 function AddAssessment({ openPopup }) {
   return (
     <button
-      className="bg-_designGray-100 border border-dashed border-_designGray-200 rounded-xl p-5 flex flex-col gap-2 items-center text-_designBlue-600 max-w-[390px]"
+      className="bg-_designGray-100 border border-dashed border-_designGray-200 rounded-xl p-5 flex flex-col gap-2 items-center text-_designBlue-600 max-w-[390px] md:gap-4"
       onClick={openPopup}
     >
       <div className="h-[50px] aspect-square flex items-center justify-center bg-white rounded-full md:h-[70px]">

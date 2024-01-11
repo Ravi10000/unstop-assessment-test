@@ -10,8 +10,8 @@ function AssessmentCard({ count = 0 }) {
   const remaning = count - labelCount;
   console.log({ remaning });
   return (
-    <div className="border border-_designGray-200 rounded-lg min-w-[300px] max-w-[390px] p-3 flex flex-col gap-3">
-      <div className="flex justify-between items-start border-b border-b-_designGray-200 border-dashed pb-3">
+    <div className="border border-_designGray-200 rounded-lg min-w-[300px] max-w-[390px] p-3 flex flex-col gap-3 md:gap-4">
+      <div className="flex justify-between items-start border-b border-b-_designGray-200 border-dashed pb-3 md:pb-4">
         <div className="flex gap-3 items-center lg:flex-col lg:items-start">
           <img src="/icons/assessment-3.svg" alt="assessment" />
           <div className="flex flex-col gap-1">
