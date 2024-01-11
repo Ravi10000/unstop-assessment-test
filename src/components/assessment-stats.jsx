@@ -41,8 +41,8 @@ function AssessmentStats() {
       </div>
       <div className="px-3 py-2 flex flex-col gap-3 border-l border-l-_designGray-200 md:py-4">
         <h3>Candidates Source</h3>
-        <div className="flex gap-5">
-          <img src="/icons/source.svg" alt="" />
+        <div className="flex gap-2 md:gap-5">
+          <img src="/icons/source.svg" alt="source" />
           <div>
             <p className="flex items-center">
               <span className="font-semibold md:text-[20px]">11,000</span>
@@ -71,7 +71,7 @@ function AssessmentStats() {
       <div className="flex-col gap-3 px-3 py-2 hidden xl:flex border-l border-l-_designGray-200 md:py-4 md:gap-5 min-w-[200px]">
         <h3 className="">Total Purpose</h3>
         <div className="flex items-center gap-3">
-          <img src="/icons/link.svg" alt="" />
+          <img src="/icons/link.svg" alt="total purpose" />
           <span className="font-semibold text-[16px] md:text-[20px]">11</span>
         </div>
       </div>
