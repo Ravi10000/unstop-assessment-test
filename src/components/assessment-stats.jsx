@@ -58,6 +58,7 @@ function AssessmentStats() {
             </p>
             <p className="text-[10px]">Social Share</p>
           </div>
+          <div className="w-[1px] bg-_designGray-200" />
           <div>
             <p className="flex items-center">
               <span className="font-semibold md:text-[20px]">11,000</span>
